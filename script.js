@@ -1,76 +1,79 @@
-(() => {
-  const qs = (sel, root = document) => root.querySelector(sel);
-  const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-
-  // Smooth scroll for nav buttons
-  const scrollToTarget = (selector) => {
-    const el = qs(selector);
-    if (!el) return;
-    const topbar = qs(".topbar");
-    const offset = (topbar?.offsetHeight || 0) + 10;
-    const y = el.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
-  qsa("[data-scroll]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-scroll");
-      if (target) scrollToTarget(target);
-    });
+// 平滑滾動
+document.querySelectorAll("[data-scroll]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const target=document.querySelector(btn.dataset.scroll);
+    if(target) target.scrollIntoView({behavior:"smooth"});
   });
+});
 
-  // Day accordion: expand/collapse
-  qsa(".day").forEach((day) => {
-    const header = qs(".day__header", day);
-    const body = qs(".day__body", day);
-    const toggleText = qs(".day__toggle", day);
+// Accordion
+document.querySelectorAll(".day").forEach(day=>{
+  const header=day.querySelector(".day__header");
+  const toggle=day.querySelector(".day__toggle");
 
-    if (!header || !body || !toggleText) return;
-
-    header.addEventListener("click", () => {
-      const expanded = header.getAttribute("aria-expanded") === "true";
-      header.setAttribute("aria-expanded", String(!expanded));
-      body.style.display = expanded ? "none" : "block";
-      toggleText.textContent = expanded ? "展開" : "收合";
-    });
+  header.addEventListener("click",()=>{
+    day.classList.toggle("is-open");
+    if(toggle){
+      toggle.textContent=
+        day.classList.contains("is-open")?"收合":"展開";
+    }
   });
+});
 
-  // Optional: reduce motion preference
-  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (prefersReduced) {
-    document.documentElement.style.scrollBehavior = "auto";
-  }
-})();
+// Carousel
+// ===============================
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
 
-// hotel carousel
-document.querySelectorAll("[data-carousel]").forEach(carousel => {
-
-  const imgs = carousel.querySelectorAll(".carousel__img");
+  const images = carousel.querySelectorAll(".carousel__img");
   const dots = carousel.querySelectorAll(".dot");
-  const prev = carousel.querySelector(".prev");
-  const next = carousel.querySelector(".next");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
 
-  let index = 0;
+  if (!images.length) return;
 
-  function show(i){
-    imgs.forEach(img => img.classList.remove("active"));
+  let current = 0;
+  let startX = 0;
+  let isDown = false;
+
+  function update(index) {
+    current = (index + images.length) % images.length;
+
+    images.forEach(img => img.classList.remove("active"));
     dots.forEach(dot => dot.classList.remove("active"));
 
-    imgs[i].classList.add("active");
-    dots[i].classList.add("active");
-    index = i;
+    images[current].classList.add("active");
+    if (dots[current]) dots[current].classList.add("active");
   }
 
-  prev.onclick = () => show((index - 1 + imgs.length) % imgs.length);
-  next.onclick = () => show((index + 1) % imgs.length);
+  function next() { update(current + 1); }
+  function prev() { update(current - 1); }
 
-  dots.forEach((dot,i)=>{
-    dot.onclick = () => show(i);
+  // 按鈕
+  if (nextBtn) nextBtn.addEventListener("click", next);
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => update(i));
   });
 
-  // auto play
-  setInterval(()=>{
-    show((index + 1) % imgs.length);
-  },8000);
+  // ⭐ 改用 Pointer 事件（比 touch 穩定）
+  carousel.addEventListener("pointerdown", (e) => {
+    startX = e.clientX;
+    isDown = true;
+  });
 
+  carousel.addEventListener("pointerup", (e) => {
+    if (!isDown) return;
+
+    const diff = startX - e.clientX;
+
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) next();
+      else prev();
+    }
+
+    isDown = false;
+  });
+
+  update(0);
 });

@@ -48,6 +48,7 @@ body {
     var(--bg);
   color: var(--text);
   line-height: 1.6;
+  font-size: 17px;
 }
 
 img {
@@ -206,6 +207,11 @@ img {
 
 .day__body {
   padding: 12px 14px 16px;
+  display: none;
+}
+
+.day.is-open .day__body {
+  display: block;
 }
 
 .heroimg {
@@ -675,68 +681,85 @@ img {
 /* ======================
    Carousel
 ====================== */
+
 .carousel {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 14px;
+  aspect-ratio: 4 / 3;  /* 你也可以改 16/9，看你飯店照片 */
+  background: rgba(255,255,255,.03);
+  touch-action: pan-y;
 }
 
 .carousel__track {
-  position: relative;
+  position: absolute;
+  inset: 0;
 }
 
+
+
 .carousel__img {
-  display: none;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
 }
 
 .carousel__img.active {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
+/* 按鈕 */
 .carousel__btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
   border: none;
+  color: white;
+  font-size: 26px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 22px;
-  font-weight: 900;
-  background: rgba(0, 0, 0, .45);
-  color: #fff;
+  backdrop-filter: blur(4px);
+  transition: 0.2s;
 }
 
-.carousel__btn.prev {
-  left: 10px;
+.carousel__btn:hover {
+  background: rgba(0,0,0,0.65);
 }
 
-.carousel__btn.next {
-  right: 10px;
-}
+.carousel__btn.prev { left: 12px; }
+.carousel__btn.next { right: 12px; }
 
+/* dots */
 .carousel__dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 6px;
+  gap: 8px;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
+  background: rgba(255,255,255,0.5);
   border-radius: 50%;
-  background: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .dot.active {
-  background: white;
+  background: #ff9d3f;
+  transform: scale(1.2);
 }
 
 /* ======================
