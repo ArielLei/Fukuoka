@@ -51,6 +51,12 @@ body {
   font-size: 17px;
 }
 
+.highlight{
+  /* background-color: rgb(255, 255, 255); */
+  color: red;
+  padding: 3px;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -225,7 +231,7 @@ img {
 }
 
 .heroimg img {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 12;
   object-fit: cover;
 }
 
@@ -862,4 +868,10 @@ img {
   .hotel__row {
     grid-template-columns: 84px 1fr;
   }
+}
+
+
+/* 先隱藏第三天 */
+#day3 {
+  display: none;
 }
