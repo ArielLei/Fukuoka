@@ -8,8 +8,8 @@
   --text: #eaf0f6;
   --muted: rgba(234, 240, 246, .75);
   --line: rgba(234, 240, 246, .12);
-  --accent: #ffb24a;
-  --accent2: #6ee7ff;
+  --accent: #de8416;
+  --accent2: #176add;
 
   --radius: 18px;
   --shadow: 0 10px 26px rgba(0, 0, 0, .35);
@@ -115,7 +115,6 @@ img {
 }
 
 .brand__sub {
-  color: var(--muted);
   font-size: 1.5rem;
 }
 
@@ -213,7 +212,7 @@ img {
 }
 
 .day__toggle {
-  color: rgba(255, 178, 74, .9);
+  color: rgba(255, 159, 33, 0.985);
   font-weight: 700;
   font-size: 1rem;
   white-space: nowrap;
@@ -360,17 +359,17 @@ img {
 .flight__head {
   display: grid;
   gap: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 1.5rem;
 }
 
 .flight__title {
   font-weight: 860;
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 
 .flight__sub {
   color: var(--muted);
-  font-size: 13px;
+  font-size:1rem;
 }
 
 .flight__grid {
@@ -397,19 +396,19 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 10px;
+  padding: 6px 20px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 178, 74, .35);
+  border: 1px solid rgb(255, 169, 57);
   background: rgba(255, 178, 74, .10);
-  color: rgba(255, 226, 187, .95);
+  color: rgb(255, 169, 57);
   font-weight: 800;
-  font-size: 12px;
+  font-size: 1.1rem;
 }
 
 .fcard__badge--return {
-  border: 1px solid rgba(110, 231, 255, .35);
+  border: 1px solid #8ca6b3;
   background: rgba(110, 231, 255, .10);
-  color: rgba(196, 245, 255, .95);
+  color: #8ca6b3;
 }
 
 .fcard__date {
@@ -483,13 +482,12 @@ img {
 .froute__line {
   width: 100%;
   height: 2px;
-  background: rgba(255, 255, 255, .12);
+  background: rgba(0, 0, 0, 0.308);
 }
 
 .froute__arrow {
   font-size: 18px;
   font-weight: 900;
-  color: rgba(255, 255, 255, .85);
 }
 
 .fmeta {
@@ -539,12 +537,12 @@ img {
 
 .hotel__title {
   font-weight: 860;
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 
 .hotel__sub {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 1rem;
 }
 
 .hotel__grid {
@@ -569,7 +567,7 @@ img {
 
 .hotel__name {
   font-weight: 920;
-  font-size: 18px;
+  font-size: 1.2rem;
   letter-spacing: .2px;
   margin-bottom: 8px;
 }
@@ -593,21 +591,21 @@ img {
   align-items: center;
   padding: 7px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, .12);
+  border: 1px solid rgba(36, 27, 27, 0.849);
   background: rgba(255, 255, 255, .04);
-  color: rgba(234, 240, 246, .92);
+  color: rgba(0, 0, 0, 0.92);
   font-size: 0.9rem;
   font-weight: 800;
 }
 
 .badge--warm {
-  border-color: rgba(255, 178, 74, .35);
-  background: rgba(255, 178, 74, .10);
+  border-color: rgba(255, 178, 74, .90);
+  background: rgba(255, 178, 74, .90);
 }
 
 .badge--cool {
-  border-color: rgba(110, 231, 255, .35);
-  background: rgba(110, 231, 255, .10);
+  border-color: rgba(103, 209, 255, 0.988);
+  background: rgba(103, 209, 255, 0.988);
 }
 
 .hotel__meta {
@@ -634,7 +632,7 @@ img {
 .hotel__row dd {
   margin: 0;
   font-size: 1rem;
-  color: rgba(234, 240, 246, .92);
+  color: rgba(0, 0, 0, 0.92);
 }
 
 .hotel__row dd strong {
@@ -643,7 +641,7 @@ img {
 }
 
 .hotel__link {
-  color: rgba(110, 231, 255, .95);
+  color: rgba(4, 109, 130, 0.95);
   text-decoration: none;
   font-weight: 850;
 }
@@ -668,7 +666,7 @@ img {
   cursor: pointer;
   padding: 12px;
   font-weight: 850;
-  color: rgba(255, 178, 74, .92);
+  color: rgba(255, 150, 12, 0.981);
   list-style: none;
 }
 
@@ -852,7 +850,8 @@ img {
   }
 
   .tl-time {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+
     padding-left: 20px;
   }
 
@@ -882,3 +881,83 @@ img {
 /* #day3 {
   display: none;
 } */
+
+/* 配色優化 */
+/* ===================================
+   長輩閱讀優化淺色主題
+   貼在整份 CSS 最下面即可
+=================================== */
+
+:root {
+  --bg: #fefbf8;                 /* 柔和灰白，不刺眼 */
+  --card: #ffffff;
+  --card2: #ffffff;
+  --text: #1b1b1b;               /* 深黑，閱讀最清楚 */
+  --muted: #4a4a4a;              /* 灰字改深一點 */
+  --line: rgba(0, 0, 0, .08);
+  --accent: #e8892d;             /* 溫暖橘 */
+  --accent2: #2da6c4;            /* 輔助藍 */
+
+  --shadow: 0 4px 12px rgba(0, 0, 0, .06);
+}
+
+/* 背景取消深色漸層 */
+body {
+  background: var(--bg);
+  font-size: 19px;      /* 放大基準字 */
+  line-height: 1.85;    /* 行距加大 */
+}
+
+/* 卡片改成淺色乾淨感 */
+.day,
+.flight__card,
+.hotel__card,
+.tips__card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
+/* Timeline 線條改淡灰 */
+.tl-item::before {
+  background: rgba(0, 0, 0, .15);
+}
+
+/* 時間字更清楚 */
+.tl-time {
+  color: #222;
+  font-weight: 900;
+}
+
+/* 內文再放大一點 */
+.tl-desc,
+.hotel__row dd,
+.fmeta dd {
+  font-size: 1rem;
+}
+
+/* Header 不要太暗 */
+.topbar {
+  background: #ef4444;
+  border-bottom: 1px solid var(--line);
+  color: #fff;
+}
+
+/* 導覽按鈕更清楚 */
+.daynav__btn {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.15);
+  color: #222;
+}
+
+/* Accordion header 改淺色 */
+.day__header {
+  background: #fafafa;
+}
+
+/* 卡片內部背景取消深色漸層 */
+.tl-card,
+.fcard,
+.hotel__info {
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
