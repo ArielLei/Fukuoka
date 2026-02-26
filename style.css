@@ -297,7 +297,7 @@ img {
   font-weight: 800;
   color: rgba(234, 240, 246, .92);
   text-align: right;
-  padding-top: 3px;
+  padding-top: 0px;
   padding-left: 10px;
   padding-right: var(--tl-time-pad-r);
   /* ✅ 避免點壓到時間 */
@@ -326,7 +326,7 @@ img {
 .tl-desc {
   margin-top: 4px;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .tl-photo {
@@ -852,7 +852,8 @@ img {
   }
 
   .tl-time {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding-left: 20px;
   }
 
   /* Flight */
