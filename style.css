@@ -47,8 +47,12 @@ body {
     radial-gradient(800px 500px at 80% 10%, rgba(255, 178, 74, .08), transparent 55%),
     var(--bg);
   color: var(--text);
-  line-height: 1.6;
-  font-size: 17px;
+  line-height: 1.8;
+  font-size: 20px;
+}
+
+.day__body {
+  font-size: 1.1rem;
 }
 
 .highlight{
@@ -106,13 +110,13 @@ img {
 
 .brand__title {
   font-weight: 780;
-  font-size: 18px;
+  font-size: 2rem;
   letter-spacing: .2px;
 }
 
 .brand__sub {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 1.5rem;
 }
 
 .daynav {
@@ -129,7 +133,7 @@ img {
   padding: 10px 12px;
   border-radius: 999px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1rem;
   min-height: 40px;
 }
 
@@ -159,13 +163,14 @@ img {
 .tips__title {
   font-weight: 760;
   margin-bottom: 6px;
+  font-size: 1.2rem;
 }
 
 .tips__list {
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 2;
 }
 
@@ -173,7 +178,7 @@ img {
    Day Accordion
 ====================== */
 .day {
-  margin-top: 16px;
+  margin-top: 1rem;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--line);
@@ -197,20 +202,20 @@ img {
 
 .day__title {
   font-weight: 800;
-  font-size: 18px;
+  font-size: 1.4rem;
   line-height: 2;
 }
 
 .day__date {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 1.2rem;
   margin-top: 2px;
 }
 
 .day__toggle {
   color: rgba(255, 178, 74, .9);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 1rem;
   white-space: nowrap;
 }
 
@@ -292,10 +297,11 @@ img {
   font-weight: 800;
   color: rgba(234, 240, 246, .92);
   text-align: right;
-  padding-top: 6px;
+  padding-top: 3px;
+  padding-left: 10px;
   padding-right: var(--tl-time-pad-r);
   /* ✅ 避免點壓到時間 */
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .tl-card {
@@ -313,14 +319,14 @@ img {
 
 .tl-title {
   font-weight: 850;
-  font-size: 15px;
+  font-size: 1.2rem;
   letter-spacing: .1px;
 }
 
 .tl-desc {
   margin-top: 4px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .tl-photo {
@@ -408,7 +414,7 @@ img {
 
 .fcard__date {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 1.2rem;
   font-weight: 650;
 }
 
@@ -426,7 +432,7 @@ img {
 }
 
 .fcard__no {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 900;
   color: var(--accent);
 }
@@ -590,7 +596,7 @@ img {
   border: 1px solid rgba(255, 255, 255, .12);
   background: rgba(255, 255, 255, .04);
   color: rgba(234, 240, 246, .92);
-  font-size: 12.5px;
+  font-size: 0.9rem;
   font-weight: 800;
 }
 
@@ -620,14 +626,14 @@ img {
 
 .hotel__row dt {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 750;
   padding-top: 2px;
 }
 
 .hotel__row dd {
   margin: 0;
-  font-size: 14px;
+  font-size: 1rem;
   color: rgba(234, 240, 246, .92);
 }
 
@@ -677,14 +683,14 @@ img {
 .hotel__sectionTitle {
   margin-top: 10px;
   font-weight: 900;
-  font-size: 14px;
+  font-size:0.9rem;
 }
 
 .hotel__list {
   margin: 6px 0 0;
   padding-left: 18px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 /* ======================
@@ -846,7 +852,7 @@ img {
   }
 
   .tl-time {
-    font-size: 13px;
+    font-size: 1rem;
   }
 
   /* Flight */

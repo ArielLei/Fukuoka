@@ -58,6 +58,7 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
 
   // ⭐ 改用 Pointer 事件（比 touch 穩定）
   carousel.addEventListener("pointerdown", (e) => {
+    carousel.setPointerCapture(e.pointerId);
     startX = e.clientX;
     isDown = true;
   });
@@ -73,6 +74,7 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     }
 
     isDown = false;
+    carousel.releasePointerCapture(e.pointerId);
   });
 
   update(0);
