@@ -433,7 +433,7 @@ img {
 }
 
 .fcard__no {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 900;
   color: var(--accent);
 }
@@ -471,8 +471,9 @@ img {
 
 .froute__time {
   margin-top: 2px;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 920;
+  color: #009a44;
 }
 
 .froute__mid {
