@@ -110,12 +110,14 @@ img {
 
 .brand__title {
   font-weight: 780;
-  font-size: 2rem;
+  font-size: 1.2rem;
   letter-spacing: .2px;
 }
 
 .brand__sub {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 10px;
 }
 
 .daynav {
