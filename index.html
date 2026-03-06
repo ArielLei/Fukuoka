@@ -1,1272 +1,1198 @@
-<!doctype html>
-<html lang="zh-Hant">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>3/15（日）～3/19（四）北九州</title>
-    <meta name="description" content="2026北九州五天行程" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>九州五日遊</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700&family=Kaisei+Decol:wght@400;700&display=swap" rel="stylesheet" />
 
-  <body>
-    <a class="skip-link" href="#content">跳到行程內容</a>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <header class="topbar" id="top">
-      <div class="topbar__inner">
-        <div class="brand">
-          <div class="brand__title">2026北九州五天行程 <span class="brand__sub">3/15（日）～3/19（四）</span></div>
+<body>
 
-        </div>
+  <!-- =============================================
+       STICKY NAV
+  ============================================= -->
+  <nav class="nav" role="navigation" aria-label="頁面導覽">
+    <!-- <a href="#top" class="nav__brand">🗾 九州五日遊</a> -->
+    <!-- <span class="nav__sep">|</span> -->
+    <ul class="nav__links">
+      <li><a href="#flight">✈ 航班</a></li>
+      <li><a href="#hotel">🏨 住宿</a></li>
+      <li><a href="#itinerary">📅 行程</a></li>
+      <li><a href="#tips">📌 注意事項</a></li>
+    </ul>
+  </nav>
 
-        <nav class="daynav" aria-label="天數快速切換">
-          <button class="daynav__btn" data-scroll="#day1">第1天</button>
-          <button class="daynav__btn" data-scroll="#day2">第2天</button>
-          <button class="daynav__btn" data-scroll="#day3">第3天</button>
-          <button class="daynav__btn" data-scroll="#day4">第4天</button>
-          <button class="daynav__btn" data-scroll="#day5">第5天</button>
-        </nav>
-      </div>
-    </header>
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <header class="hero" id="top">
+    <div class="hero__tag">Family Trip · 2026</div>
+    <h1 class="hero__title">九州五日遊</h1>
+    <!-- <p class="hero__desc">
+      博多運河城、太宰府天滿宮、採草莓、賞櫻花，滿滿的行程等著我們！
+      <br>這次的九州之旅將帶給我們難忘的回憶，讓我們一起期待吧！
+    </p> -->
+    <div class="hero__chips">
+      <span class="chip">📅 3/15（日）～3/19（四）</span>
+      <span class="chip">✈ 飛福岡機場</span>
+      <span class="chip">🌸 春季賞花</span>
+    </div>
+  </header>
 
-    <section class="flight" id="flight">
-      <div class="flight__card">
-        <div class="flight__head">
-          <div class="flight__title">✈️ 航班資訊（長榮）</div>
-          <div class="flight__sub">去回程時間＆航廈</div>
-        </div>
-
-        <div class="flight__grid" role="list">
-          <!-- 去程 -->
-          <article class="fcard" role="listitem" aria-label="去程航班資訊">
-            <div class="fcard__top">
-              <div class="fcard__badge">去程</div>
-              <div class="fcard__date">3/15（日）</div>
-            </div>
-
-            <div class="fcard__flightno">
-              <div class="fcard__airline">長榮航空</div>
-              <div class="fcard__no">BR106</div>
-            </div>
-
-            <div class="froute">
-              <div class="froute__pt">
-                <div class="froute__code">TPE</div>
-                <div class="froute__name">台灣桃園機場</div>
-                <div class="froute__term">航廈 2</div>
-                <div class="froute__time">08:00</div>
-              </div>
-
-              <div class="froute__mid" aria-hidden="true">
-                <div class="froute__line"></div>
-                <div class="froute__arrow">→</div>
-                <div class="froute__line"></div>
-              </div>
-
-              <div class="froute__pt">
-                <div class="froute__code">FUK</div>
-                <div class="froute__name">福岡機場</div>
-                <div class="froute__term">航廈 1</div>
-                <div class="froute__time">11:15</div>
-              </div>
-            </div>
-
-            <dl class="fmeta">
-              <div class="fmeta__row">
-                <dt>機型</dt>
-                <dd>波音 787-10</dd>
-              </div>
-              <div class="fmeta__row">
-                <dt>座位配置</dt>
-                <dd>3-3-3</dd>
-              </div>
-              <div class="fmeta__row">
-                <dt>飛行時間</dt>
-                <dd>02 小時 15 分</dd>
-              </div>
-            </dl>
-          </article>
-
-          <!-- 回程 -->
-          <article class="fcard" role="listitem" aria-label="回程航班資訊">
-            <div class="fcard__top">
-              <div class="fcard__badge fcard__badge--return">回程</div>
-              <div class="fcard__date">3/19（四）</div>
-            </div>
-
-            <div class="fcard__flightno">
-              <div class="fcard__airline">長榮航空</div>
-              <div class="fcard__no">BR105</div>
-            </div>
-
-            <div class="froute">
-              <div class="froute__pt">
-                <div class="froute__code">FUK</div>
-                <div class="froute__name">福岡機場</div>
-                <div class="froute__term">航廈 1</div>
-                <div class="froute__time">12:15</div>
-              </div>
-
-              <div class="froute__mid" aria-hidden="true">
-                <div class="froute__line"></div>
-                <div class="froute__arrow">→</div>
-                <div class="froute__line"></div>
-              </div>
-
-              <div class="froute__pt">
-                <div class="froute__code">TPE</div>
-                <div class="froute__name">台灣桃園機場</div>
-                <div class="froute__term">航廈 2</div>
-                <div class="froute__time">13:50</div>
-              </div>
-            </div>
-
-            <dl class="fmeta">
-              <div class="fmeta__row">
-                <dt>機型</dt>
-                <dd>波音 787-9</dd>
-              </div>
-              <div class="fmeta__row">
-                <dt>座位配置</dt>
-                <dd>3-3-3</dd>
-              </div>
-              <div class="fmeta__row">
-                <dt>飛行時間</dt>
-                <dd>02 小時 35 分</dd>
-              </div>
-            </dl>
-          </article>
+  <!-- =============================================
+       航班資訊
+  ============================================= -->
+  <section class="section" id="flight">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-title__icon">✈</div>
+        <div>
+          <div class="section-title__text">來回航班資訊</div>
+          <div class="section-title__sub">長榮航空 ｜ 桃園 ⇄ 福岡</div>
         </div>
       </div>
-    </section>
 
-    <section class="hotel" id="hotel">
-      <div class="hotel__card">
-        <div class="hotel__head">
-          <div class="hotel__title">🏨 住宿飯店</div>
-        </div>
+      <div class="flight-wrap fade-in">
 
-        <div class="hotel__grid">
-          <!-- 左：照片預留 -->
-          <div class="hotel__photo">
-            <div class="carousel" data-carousel>
-              <div class="carousel__track">
-                <img src="./images/hotel1.jpg" class="carousel__img active" />
-                <img src="./images/hotel2.jpg" class="carousel__img" />
-                <img src="./images/hotel4.jpg" class="carousel__img" />
-                <img src="./images/hotel5.jpg" class="carousel__img" />
-                <img src="./images/hotel3.jpg" class="carousel__img" />
+        <!-- 去程 -->
+        <article class="flight-card" aria-label="去程航班">
+          <div class="flight-card__head">
+            <span class="flight-card__dir">▶ 去程  3/15（日）</span>
+            <span class="flight-card__no">長榮 BR106</span>
+          </div>
+          <div class="flight-card__body">
+            <div class="route">
+              <div class="route__airport">
+                <div class="route__code">TPE</div>
+                <div class="route__city">台北・桃園</div>
+                <div class="route__time">08:00</div>
+              </div>
+              <div class="route__mid">
+                <div class="route__line" aria-hidden="true"></div>
+                <div class="route__dur">飛行  02小時15分</div>
+              </div>
+              <div class="route__airport">
+                <div class="route__code">FUK</div>
+                <div class="route__city">福岡空港</div>
+                <div class="route__time">11:15</div>
+              </div>
+            </div>
+            <div class="flight-meta">
+              <div class="fmeta">
+                <span class="fmeta__label">機型</span>
+                <span class="fmeta__value">波音 787-10</span>
               </div>
 
-              <button class="carousel__btn prev">‹</button>
-              <button class="carousel__btn next">›</button>
-
-              <div class="carousel__dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+              <div class="fmeta">
+                <span class="fmeta__label">座位配置</span>
+                <span class="fmeta__value">3-3-3</span>
               </div>
             </div>
           </div>
+        </article>
 
-          <!-- 右：資訊 -->
-          <div class="hotel__info">
-            <div class="hotel__name">
-              Miyako Hotel Hakata <span class="hotel__nameSub">博多都飯店</span>
-            </div>
-
-            <div class="hotel__badges" aria-label="飯店重點標籤">
-              <span class="badge">筑紫口對面</span>
-              <span class="badge">B1 直通博多站東7出口</span>
-              <span class="badge">近地鐵機場線</span>
-              <span class="badge badge--cool">3F 櫃檯大廳</span>
-              <span class="badge badge--warm">13F 早餐</span>
-            </div>
-
-            <dl class="hotel__meta">
-              <div class="hotel__row">
-                <dt>位置</dt>
-                <dd>
-                  筑紫口對面；飯店 B1 入口直通博多車站「東 7
-                  號出口」；靠近地鐵機場線
-                </dd>
-              </div>
-
-              <div class="hotel__row">
-                <dt>地址</dt>
-                <dd>
-                  2-1-1 Hakataeki-higashi Hakata-ku, Fukuoka, Fukuoka, 812-0013,
-                  JP<br />
-                  〒812－0013 福岡市博多区博多駅東2-1-1
-                </dd>
-              </div>
-
-              <div class="hotel__row">
-                <dt>電話</dt>
-                <dd>+81-92-441-3111</dd>
-              </div>
-
-              <div class="hotel__row">
-                <dt>入住／退房</dt>
-                <dd>
-                  <strong>15:00</strong> 入住 ｜ <strong>12:00</strong> 退房
-                </dd>
-              </div>
-
-              <div class="hotel__row">
-                <dt>早餐</dt>
-                <dd>13F 自助餐，07:00–10:30（最終進場：10:00）</dd>
-              </div>
-
-              <div class="hotel__row">
-                <dt>行李</dt>
-                <dd>
-                  入住前後可寄放行李（請到 3F
-                  大廳詢問）；回程可請飯店協助叫計程車
-                </dd>
-              </div>
-
-              <div class="hotel__row">
-                <dt>住宿稅</dt>
-                <dd class="note">
-                  可能會收取住宿稅：依每晚房價而定，每人每晚約
-                  JPY100～JPY10,000（可能有免稅情況）
-                </dd>
-              </div>
-            </dl>
-
-            <details class="hotel__details">
-              <summary>設備與樓層資訊（點我展開）</summary>
-
-              <div class="hotel__detailsBody">
-                <div class="hotel__sectionTitle">房內提供</div>
-                <ul class="hotel__list">
-                  <li>智慧電視、膠囊咖啡機、電話、免費上網（Wi-Fi）</li>
-                  <li>電熱水壺、冰箱、吹風機、保險箱、加濕空氣清淨機</li>
-                  <li>盥洗用品：洗髮精、護髮素、沐浴乳、香皂</li>
-                  <li>牙刷套裝、刮鬍刀、熨斗、燙衣板、拖鞋</li>
-                  <li>浴巾、面巾、擦手巾、睡衣</li>
-                  <li>每層樓提供飲水機</li>
-                </ul>
-
-                <div class="hotel__sectionTitle">樓層</div>
-                <ul class="hotel__list">
-                  <li><strong>B1F</strong> 麥當勞</li>
-                  <li><strong>1F</strong> 星巴克</li>
-                  <li><strong>3F</strong> 大廳</li>
-                  <li><strong>13F</strong> 早餐</li>
-                  <li><strong>13F</strong> 泡湯泳池</li>
-                </ul>
-              </div>
-            </details>
+        <!-- 回程 -->
+        <article class="flight-card" aria-label="回程航班">
+          <div class="flight-card__head" style="background:var(--green)">
+            <span class="flight-card__dir">◀ 回程 3/19(四) </span>
+            <span class="flight-card__no">長榮 BR105</span>
           </div>
+          <div class="flight-card__body">
+            <div class="route">
+              <div class="route__airport">
+                <div class="route__code">FUK</div>
+                <div class="route__city">福岡空港</div>
+                <div class="route__time" style="color:var(--green)">12:15</div>
+              </div>
+              <div class="route__mid">
+                <div class="route__line" aria-hidden="true"></div>
+                <div class="route__dur">飛行  02小時35分</div>
+              </div>
+              <div class="route__airport">
+                <div class="route__code">TPE</div>
+                <div class="route__city">台北・桃園</div>
+                <div class="route__time" style="color:var(--green)">13:50</div>
+              </div>
+            </div>
+            <div class="flight-meta">
+              <div class="fmeta">
+                <span class="fmeta__label">機型</span>
+                <span class="fmeta__value">波音787-9 </span>
+              </div>
+
+              <div class="fmeta">
+                <span class="fmeta__label">座位配置</span>
+                <span class="fmeta__value">3-3-3</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- end .flight-wrap -->
+    </div>
+  </section>
+
+  <!-- =============================================
+       住宿資訊
+  ============================================= -->
+  <section class="section section--alt" id="hotel">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-title__icon">🏨</div>
+        <div>
+          <div class="section-title__text">住宿飯店</div>
+          <div class="section-title__sub">全程共 4 晚</div>
         </div>
       </div>
-    </section>
 
-    <main id="content" class="container">
-      <section class="tips">
-        <div class="tips__card">
-          <div class="tips__title">🇯🇵日本旅遊注意事項</div>
-          <ul class="tips__list">
-            <li>
-              時差：日本時間比台灣快 1 小時，例如日本中午 12 點，台灣是上午 11
-              點。
-            </li>
-            <li>
-              電壓：日本電壓為100V，台灣為110V，差異很小。大部分手機、筆電等充電器都支援國際電壓（100V-240V），不需要變壓器。
-            </li>
-            <li>刷卡：選日幣計價較划算</li>
-            <li>
-              入境日本攜帶日幣現金沒有絕對的「上限」，但若總額超過100萬日圓（含等值外幣、旅行支票、有價證券），就必須向日本海關申報，隨身攜帶、配戴金飾品總計價值超過20萬日圓，也必須另外填報。
-            </li>
-            <li>搭乘大眾運輸時，不能講電話，後背包往前背。</li>
-            <li>
-              神社參拜禮儀：鳥居前停一下、微微鞠躬（不用太正式），走路不要走正中央，正中央是「神明走的路」稍微靠左或靠右走就好。
-            </li>
-            <li>
-              神社參拜流程：丟香油錢(通常是¥5)，鞠躬兩次 → 拍手兩次 → 心裡許願 →
-              鞠躬一次。
-            </li>
-            <li>
-              日本公共垃圾桶不多，小垃圾先放包包，回飯店或車站看到垃圾桶再丟就好。
-            </li>
-            <li>
-              日本人非常注重隱私權，拍照時注意不要拍到其他人的臉，尤其是小孩。
-            </li>
-          </ul>
+      <div class="hotel-card fade-in">
+        <!-- 輪播 -->
+        <div class="carousel" id="hotelCarousel" role="region" aria-label="飯店圖片輪播">
+          <div class="carousel__track" id="carouselTrack">
+            <div class="carousel__slide slide-c1"><img src="./images/hotel1.jpg" alt="Miyako Hotel Hakata"></div>
+            <div class="carousel__slide slide-c2"><img src="./images/hotel2.jpg" alt="Miyako Hotel Hakata"></div>
+            <div class="carousel__slide slide-c3"><img src="./images/hotel3.jpg" alt="Miyako Hotel Hakata"></div>
+            <div class="carousel__slide slide-c4"><img src="./images/hotel4.jpg" alt="Miyako Hotel Hakata"></div>
+            <div class="carousel__slide slide-c4"><img src="./images/hotel5.jpg" alt="Miyako Hotel Hakata"></div>
+            <div class="carousel__slide slide-c4"><img src="./images/hotel6.jpg" alt="Miyako Hotel Hakata"></div>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" id="prevBtn" aria-label="上一張">‹</button>
+            <div class="carousel__dots">
+              <button class="carousel__dot active" data-index="0" aria-label="圖片1"></button>
+              <button class="carousel__dot" data-index="1" aria-label="圖片2"></button>
+              <button class="carousel__dot" data-index="2" aria-label="圖片3"></button>
+              <button class="carousel__dot" data-index="3" aria-label="圖片4"></button>
+              <button class="carousel__dot" data-index="4" aria-label="圖片5"></button>
+              <button class="carousel__dot" data-index="5" aria-label="圖片6"></button>
+            </div>
+            <button class="carousel__btn" id="nextBtn" aria-label="下一張">›</button>
+          </div>
         </div>
-      </section>
 
-      <section class="tips">
-        <div class="tips__card">
-          <div class="tips__title">💰退稅政策</div>
-          <ul class="tips__list">
-            <li>
-              在同一家店內購買的【一般用品】和【消耗品】可以合併計算！只要累積消費金額達到「未稅5,000日圓以上、未稅500,000日圓以下」即可免稅。在同一個百貨商場內的不同店家購物超過以上累計金額也可於免稅櫃檯辦理退稅。
-            </li>
-            <li>免稅商店內可以未稅金額結帳，而百貨商場則須至免稅櫃台退稅</li>
-            <li>
-              需本人出示蓋有入境章的護照、船舶上陸許可書或免稅QR
-              Code，待店員確認入境資格和個人資料，並輸入本次購買記錄傳送至海關。
-            </li>
-            <li>
-              消耗品（用一次就會不見）會用免稅袋密封起來，非消耗品（可以重複使用不會不見）不會密封，例:鞋子、衣服￼與電器。
-            </li>
-          </ul>
+        <div class="hotel-body">
+
+          <!-- 飯店名稱 & 基本資訊 -->
+          <div class="hotel-body__name">Miyako Hotel Hakata <br>博多都飯店</div>
+          <!-- <div class="hotel-body__loc">📍 〒812-0013 福岡市博多区博多駅東2-1-1　｜　☎ +81-92-441-3111</div> -->
+          <div class="hotel-body__desc">
+            飯店 B1 入口直通博多車站東 7 號出口，筑紫口對面，地鐵機場線步行即達。
+          </div>
+
+          <!-- 訂單資訊 -->
+          <div style="background:var(--bg-alt);border-radius:var(--r-sm);padding:0.85rem 1rem;margin-bottom:0.9rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.5rem 1.5rem;">
+            <!-- <div class="fmeta">
+              <span class="fmeta__label">訂單編號</span>
+              <span class="fmeta__value">16457095</span>
+            </div>
+            <div class="fmeta">
+              <span class="fmeta__label">飯店預訂編號</span>
+              <span class="fmeta__value">2347464075</span>
+            </div> -->
+            <div class="fmeta">
+              <span class="fmeta__label">入住時間</span>
+              <span class="fmeta__value" style="color:var(--accent)">15:00 ✓</span>
+            </div>
+            <div class="fmeta">
+              <span class="fmeta__label">退房時間</span>
+              <span class="fmeta__value" style="color:var(--accent)">12:00 前</span>
+            </div>
+          </div>
+
+          <!-- 樓層導覽 -->
+          <div style="margin-bottom:0.9rem;">
+            <div style="font-weight:700;font-size:0.82rem;color:var(--ink-2);margin-bottom:0.45rem;letter-spacing:0.05em;">🏢 樓層導覽</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+              <span class="tag tag--gray">B1F 麥當勞</span>
+              <span class="tag tag--gray">1F 星巴克</span>
+              <span class="tag tag--gray">3F 大廳・寄行李</span>
+              <span class="tag tag--gold">13F 早餐自助餐</span>
+              <span class="tag tag--gold">13F 泡湯・泳池</span>
+            </div>
+          </div>
+
+          <!-- 早餐資訊 -->
+          <div style="background:var(--gold-soft);border-left:3px solid var(--gold);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:0.7rem 0.9rem;margin-bottom:0.9rem;font-size:0.83rem;color:var(--ink-2);line-height:1.8;">
+            🍳 <strong>早餐：13F 自助餐</strong>　時間：07:00 – 10:30　｜　最終進場：<strong>10:00</strong>
+          </div>
+
+          <!-- 設施標籤 -->
+          <div style="margin-bottom:0.9rem;">
+            <div style="font-weight:700;font-size:0.82rem;color:var(--ink-2);margin-bottom:0.45rem;">🛎 客房設施</div>
+            <div class="tags">
+              <span class="tag tag--green">📺 智慧電視</span>
+              <span class="tag tag--green">☕ 膠囊咖啡機</span>
+              <span class="tag tag--green">🌐 免費 Wi-Fi</span>
+              <span class="tag tag--green">🧊 冰箱</span>
+              <span class="tag tag--green">💨 吹風機</span>
+              <span class="tag tag--green">🔒 保險箱</span>
+              <span class="tag tag--green">🌿 加濕空氣清淨機</span>
+              <span class="tag tag--green">🧴 盥洗用品完整</span>
+              <span class="tag tag--green">👘 睡衣</span>
+              <span class="tag tag--green">👟 拖鞋</span>
+              <span class="tag tag--green">👔 熨斗・燙衣板</span>
+              <span class="tag tag--gray">💧 每層飲水機</span>
+            </div>
+          </div>
+
+          <!-- 注意事項 -->
+          <div style="background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:0.7rem 0.9rem;font-size:0.82rem;color:var(--ink-2);line-height:1.9;">
+            ⚠️ <strong>住宿稅</strong>：依每晚房價，每人每晚 ¥100 – ¥10,000 不等，現場收取。<br>
+            🧳 <strong>行李寄放</strong>：入住前後均可寄放，請至 <strong>3F 大廳</strong>詢問工作人員。<br>
+            🚖 <strong>計程車</strong>：回程可請飯店大廳協助叫車。
+          </div>
+
         </div>
-      </section>
+      </div><!-- end .hotel-card -->
+    </div>
+  </section>
 
-      <section class="tips">
-        <div class="tips__card">
-          <div class="tips__title">❗網頁操作小提醒</div>
-          <ul class="tips__list">
-            <li>點擊「展開／收合」，查看每天的行程。</li>
-            <li>看到 🚻 代表該地點有洗手間。</li>
-          </ul>
+  <!-- =============================================
+       每日行程（TAB 切換）
+  ============================================= -->
+  <section class="section" id="itinerary">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-title__icon">📅</div>
+        <div>
+          <div class="section-title__text">每日詳細行程</div>
+          <div class="section-title__sub">左右滑動選日期，點選日期查看當天時間表</div>
         </div>
-      </section>
-
-      <!-- DAY 1 -->
-      <section id="day1" class="day">
-        <button class="day__header" type="button" aria-expanded="false">
-          <div class="day__meta">
-            <div class="day__title">第1天<br />出發・下午逛博多商圈</div>
-            <div class="day__date">3/15（日）</div>
-          </div>
-          <div class="day__toggle">展開</div>
-        </button>
-
-        <div class="day__body">
-          <div class="heroimg">
-            <img
-              src="./images/fukuokaairport.webp"
-              alt="福岡城市示意照片"
-              loading="lazy"
-            />
-          </div>
-
-          <ol class="timeline" aria-label="Day 1 時間軸">
-            <li class="tl-item">
-              <div class="tl-time">04:00</div>
-              <div class="tl-card">
-                <div class="tl-title">家裡吃早餐</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">05:00</div>
-              <div class="tl-card">
-                <div class="tl-title">搭專車接送</div>
-                <div class="tl-desc">
-                  計程車從家裡到桃園機場第二航廈，車程約 50 分鐘。
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">06:00</div>
-              <div class="tl-card">
-                <div class="tl-title">抵達桃園機場第二航廈 🚻</div>
-                <div class="tl-desc">
-                  長榮櫃檯報到→托運行李→安檢→海關→前往登機門，跟著指示走，登機門可能比較遠（可能需接駁車）。
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">07:30</div>
-              <div class="tl-card">
-                <div class="tl-title">登機 🚻</div>
-                <div class="tl-desc">提早到登機門準備</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">08:00</div>
-              <div class="tl-card">
-                <div class="tl-title">起飛 🚻</div>
-                <div class="tl-desc">吃完飛機餐後可以睡一下、補體力。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">11:15</div>
-              <div class="tl-card">
-                <div class="tl-title">抵達福岡機場 🚻</div>
-                <div class="tl-desc">下飛機→入境審查→領行李→海關申報。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">12:00</div>
-              <div class="tl-card">
-                <div class="tl-title">搭計程車前往飯店 🚻</div>
-                <div class="tl-desc">先到飯店寄放行李</div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">12:30</div>
-              <div class="tl-card">
-                <div class="tl-title">逛博多車站商圈 🚻</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>
-                      AMU EST：1F 3COINS、B1F @cosme STORE、1F Uniqlo、B1F ABC
-                      MART
-                    </li>
-                    <li>AMU PLAZA：1樓至5樓HANDS、6F無印良品</li>
-                    <li>MING マイング：網羅多達90家以上的伴手禮店</li>
-                    <li>
-                      屋上庭園(燕之森廣場)：博多車站隱藏景點，從AMU PLAZA
-                      的中間電梯搭乘到10F，再乘坐手扶梯直達頂樓，觀景台、鐵道神社、鳥居、可以坐著休息吃點心。
-                    </li>
-                    <li>博多阪急：B1伴手禮區</li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img src="./images/station2.png" loading="lazy" />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">14:15</div>
-              <div class="tl-card">
-                <div class="tl-title">友都八喜LOPIA超市買零食、水果</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>友都八喜4F LOPIA超市、大創</li>
-                    <li>LOPIA沒有退稅，只收現金</li>
-                    <li>晚上人潮較多，建議避開該時段</li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/lopia.jpg"
-                    alt="日本藥妝店示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">15:00</div>
-              <div class="tl-card">
-                <div class="tl-title">飯店入住</div>
-                <div class="tl-desc">回房休息。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">17:00</div>
-              <div class="tl-card">
-                <div class="tl-title">
-                  晚餐：博多名物料理 喜水丸 (C店筑紫口)
-                </div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>白飯、味增湯、酸菜、明太子吃到飽</li>
-                    <li>門口有取號機，有中文介面。</li>
-                    <li>點餐方式：平板</li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img src="./images/hpublic.avif" loading="lazy" />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">18:00</div>
-              <div class="tl-card">
-                <div class="tl-title">藥妝＆採買</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>Lawson超商</li>
-                    <li>SUGI藥局博多車站東店(網頁折價券)</li>
-                    <li>大國藥妝(App折價券)</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">（晚上）</div>
-              <div class="tl-card">
-                <div class="tl-title">回房休息</div>
-                <div class="tl-desc">洗澡吃水果</div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- DAY 2 -->
-      <section id="day2" class="day">
-        <button class="day__header" type="button" aria-expanded="false">
-          <div class="day__meta">
-            <div class="day__title">第2天<br />地鐵一日遊</div>
-            <div class="day__date">3/16（一）</div>
-          </div>
-          <div class="day__toggle">展開</div>
-        </button>
-
-        <div class="day__body">
-          <div class="heroimg">
-            <img
-              src="./images/map.webp"
-              alt="福岡地鐵示意照片"
-              loading="lazy"
-            />
-          </div>
-
-          <ol class="timeline" aria-label="Day 2 時間軸">
-            <li class="tl-item">
-              <div class="tl-time">07:00</div>
-              <div class="tl-card">
-                <div class="tl-title">飯店早餐</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">07:45</div>
-              <div class="tl-card">
-                <div class="tl-title">回房休息</div>
-                <div class="tl-desc">可以蹲個廁所，躺一下。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">08:30</div>
-              <div class="tl-card">
-                <div class="tl-title">博多站購買地鐵一日票</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>福岡地下鐵在B2，有很多入口</li>
-                    <li>地鐵一日券全天自由乘坐，640日幣/1人。</li>
-                    <li>
-                      將車票放入驗票機口，車票進入自動驗票機後閘門打開。通過驗票口後請取回車票。
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">08:50</div>
-              <div class="tl-card">
-                <div class="tl-title">
-                  櫛田神社：博多站搭乘綠色七隈線到櫛田神社前站 🚻
-                </div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>營業時間：09:00–17:00</li>
-                    <li>
-                      至今超過1200年歷史，可以說是福岡最古老的神社之一，出口有一棵千年的銀杏樹。
-                    </li>
-                    <li>
-                      神社內種植著河津櫻，比起一般的櫻花，可能在2月底左右就先提早賞花。
-                    </li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/spot1.jpg"
-                    alt="神社示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">10:00</div>
-              <div class="tl-card">
-                <div class="tl-title">
-                  博多運河城：櫛田神社對面的電扶梯連結到博多運河城，約走300公尺
-                  🚻
-                </div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>
-                      B1：JUMP
-                      SHOP海賊王、三麗鷗、松本清(App折價券)、美食街、THANK YOU
-                      MART(均一價390)、扭蛋、餐廳
-                    </li>
-                    <li>1F：GAP、愛迪達</li>
-                    <li>2F：迪士尼商店</li>
-                    <li>
-                      3F：MUJI、ABCMart旗艦店、北臉、Alpen運動用品(南館1F~3F)
-                    </li>
-                    <li>4F：宜得利、博多天婦羅TAKAO</li>
-                  </ul>
-                </div>
-
-                <div class="tl-photo">
-                  <img
-                    src="./images/spot2.jpg"
-                    alt="運河城示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">11:00</div>
-              <div class="tl-card">
-                <div class="tl-title">午餐：鹿兒島黑牛 泰元牛排</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>博多運河城 B1</li>
-                    <li>點餐方式：用手機掃QR Code點餐</li>
-                    <li>套餐約在 1900¥至2500¥之間（包含飯、沙拉、味噌湯）</li>
-                  </ul>
-                </div>
-
-                <div class="tl-photo">
-                  <img
-                    src="./images/beef.jpg"
-                    alt="神社示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">12:00</div>
-              <div class="tl-card">
-                <div class="tl-title">川端通商店街</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>長度約400公尺</li>
-                    <li>川端通商店街連接著櫛田神社</li>
-                    <li>川端通商店街尾端連接中洲川端站5號出口</li>
-                  </ul>
-                </div>
-
-                <div class="tl-photo">
-                  <img
-                    src="./images/street.jpeg"
-                    alt="神社示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">12:20</div>
-              <div class="tl-card">
-                <div class="tl-title">唐吉訶德中洲店（折價券）</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>1F：主要賣三麗鷗、動漫類、美妝、保養、保健食品</li>
-                    <li>2F：主要賣零食、餅乾、伴手禮、飲品類</li>
-                    <li>最高10%免稅+消費1萬日圓以上（不含稅）5%折扣</li>
-                    <li>最高10%免稅+消費3萬日圓以上（不含稅）7%折扣</li>
-                    <li>與中州川端站4號出口連通，逛完可以直接搭地鐵</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">13:30</div>
-              <div class="tl-card">
-                <div class="tl-title">回飯店午睡</div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">15:15</div>
-              <div class="tl-card">
-                <div class="tl-title">
-                  大濠公園：博多站搭乘橘色機場線到大濠公園站 🚻
-                </div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>
-                      大濠公園面積40公頃，它仿照杭州西湖而建，擁有一座廣大的湖泊，湖中有三座小島以橋樑相連
-                    </li>
-                    <li>
-                      隔壁是舞鶴公園，也是福岡城遺跡。舞鶴公園面積39公頃。
-                    </li>
-                    <li>可能有櫻花開</li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/spot3.jpg"
-                    alt="公園示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">16:00</div>
-              <div class="tl-card">
-                <div class="tl-title">
-                  天神商圈：大濠公園站搭乘橘色機場線到天神站 🚻
-                </div>
-                <div class="tl-desc">
-                  <ul>
-                    <span style="font-size: 16px; font-weight: 500"
-                      >🛍️Mina天神</span
-                    >
-                    <li>
-                      各品牌在九州地區最大規模的分店，例如
-                      3COINS＋PLUS免稅(B1F)、松本清免稅(B1F/App折價券)、UNIQLO免稅(1、2F)、GU免稅(3F)、LOFT免稅(4F)、
-                    </li>
-                    <li>退稅方式採店鋪個別退稅，不需要另外到綜合櫃檯辦理。</li>
-                  </ul>
-                  <ul>
-                    <span style="font-size: 16px; font-weight: 500"
-                      >🛍️AEON shopper福岡店</span
-                    >
-                    <li>4F：大創、THREEPPY百円店</li>
-                    <li>2F：九州最大無印良品</li>
-                    <li>
-                      B1~1F超市：熟食、水果、零食、藥妝，TOPVALU，AEON自家品牌
-                    </li>
-                    <li>
-                      可使用優惠券，不限金額，結帳時手機出示優惠券即可折價5%，還可以再退稅10%
-                    </li>
-                    <li>
-                      永旺SHOPPERS福岡店有提供免稅服務，在AEON直營的B1、1樓及3樓購買的商品，統一在1樓服務台辦理
-                    </li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/mina.webp"
-                    alt="天神商圈示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">18:00</div>
-              <div class="tl-card">
-                <div class="tl-title">天神站搭乘橘色機場線回博多站</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">18:30</div>
-              <div class="tl-card">
-                <div class="tl-title">晚餐</div>
-                <div class="tl-desc">可以外帶AEON熟食回飯店吃</div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <p class="highlight">第3天<br />近郊景點一日遊：包車行程待廠商確認</p>
-
-      <!-- DAY 3 -->
-      <section id="day3" class="day">
-        <button class="day__header" type="button" aria-expanded="false">
-          <div class="day__meta">
-            <div class="day__title">第3天<br />近郊景點一日遊</div>
-            <div class="day__date">3/17（二）</div>
-          </div>
-          <div class="day__toggle">展開</div>
-        </button>
-
-        <div class="day__body">
-          <div class="heroimg">
-            <img
-              src="./images/tour.jpg"
-              alt="日本一日遊示意照片"
-              loading="lazy"
-            />
-          </div>
-
-          <ol class="timeline" aria-label="Day 3 時間軸">
-            <li class="tl-item">
-              <div class="tl-time">07:00</div>
-              <div class="tl-card">
-                <div class="tl-title">飯店早餐</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">07:40</div>
-              <div class="tl-card">
-                <div class="tl-title">回房休息 🚻</div>
-                <div class="tl-desc">可以蹲個廁所，躺一下。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">08:20</div>
-              <div class="tl-card">
-                <div class="tl-title">博多站築紫口前集合</div>
-                <div class="tl-desc">提早到比較安心</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">08:30</div>
-              <div class="tl-card">
-                <div class="tl-title">發車</div>
-                <div class="tl-desc">車上可小睡</div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">09:40</div>
-              <div class="tl-card">
-                <div class="tl-title">草莓園 🚻（停留約 80 分鐘）</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>九州最大，11個品種的草莓</li>
-                    <li>成人 2,500 日圓 ，草莓60分鐘吃到飽</li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/01.jpg"
-                    alt="草莓園示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">11:20</div>
-              <div class="tl-card">
-                <div class="tl-title">戀木神社 🚻（停留約 40 分鐘）</div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/00.jpg"
-                    alt="神社示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">12:30</div>
-              <div class="tl-card">
-                <div class="tl-title">
-                  柳川遊船＋午餐：鰻魚飯百年老店 🚻（停留約 80 分鐘）
-                </div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>
-                      根據划船時長以及運營商家不同，費用每人半小時1000、一小時2000日元
-                    </li>
-                    <li>可順路參觀立花邸「御花」（位於柳川遊船下船處附近）</li>
-                    <li>柳川附近的鰻魚飯：元祖本吉屋、若松屋</li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/02.jpg"
-                    alt="柳川遊船示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">15:00</div>
-              <div class="tl-card">
-                <div class="tl-title">太宰府天滿宮 🚻（停留約 80 分鐘）</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>已有1,100年歷史，主祀「學問之神」</li>
-                    <li>遊客中心旁的「御神牛」，據說撫摸頭就能獲得智慧</li>
-                    <li>
-                      天滿宮表參道有許多小吃：安武梅枝餅、福太郎明太子烤飯糰、YAMAYA明太子法國麵包、天山草莓大福
-                    </li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/03.jpg"
-                    alt="太宰府示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">17:00</div>
-              <div class="tl-card">
-                <div class="tl-title">回到博多站築紫口 🚻</div>
-                <div class="tl-desc"></div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">17:30</div>
-              <div class="tl-card">
-                <div class="tl-title">晚餐：日本家常菜定食</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>位置：博多KITTE9F</li>
-                    <li>點餐方式：手機掃碼點餐，有中文</li>
-                  </ul>
-                </div>
-
-                <div class="tl-photo">
-                  <img
-                    src="./images/caption.jpg"
-                    alt="太宰府示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">18:30</div>
-              <div class="tl-card">
-                <div class="tl-title">超市、超商、藥局採買</div>
-                <div class="tl-desc">如果有需要的話</div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- DAY 4 -->
-      <section id="day4" class="day">
-        <button class="day__header" type="button" aria-expanded="false">
-          <div class="day__meta">
-            <div class="day__title">第4天<br />新幹線來回熊本城</div>
-            <div class="day__date">3/18（三）</div>
-          </div>
-          <div class="day__toggle">展開</div>
-        </button>
-
-        <div class="day__body">
-          <div class="heroimg">
-            <img src="./images/jr.webp" alt="新幹線示意照片" loading="lazy" />
-          </div>
-
-          <ol class="timeline" aria-label="Day 4 時間軸">
-            <li class="tl-item">
-              <div class="tl-time">07:00</div>
-              <div class="tl-card">
-                <div class="tl-title">飯店早餐</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">07:45</div>
-              <div class="tl-card">
-                <div class="tl-title">回房休息</div>
-                <div class="tl-desc">可以蹲個廁所，躺一下。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">09:00</div>
-              <div class="tl-card">
-                <div class="tl-title">博多站內採購伴手禮(銘品藏)</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">10:00</div>
-              <div class="tl-card">
-                <div class="tl-title">阪急採購（島本明太子醬、AMANBERRY）</div>
-                <div class="tl-desc">明太子醬回飯店放冰箱。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">10:45</div>
-              <div class="tl-card">
-                <div class="tl-title">前往車站買新幹線來回票</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>
-                      新幹線：「瑞穗號、櫻花號、燕子號」3種列車，依車種不同，停靠站與所需時間也會有所差異（票價相同）
-                    </li>
-                    <li>
-                      整體班次約每20分鐘1班，但瑞穗號班次較少，需特別留意。
-                    </li>
-                    <li>自由席票價：單趟5,310日圓</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">11:00</div>
-              <div class="tl-card">
-                <div class="tl-title">進站候車</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">11:28</div>
-              <div class="tl-card">
-                <div class="tl-title">搭乘新幹線自由座 → 熊本</div>
-                <div class="tl-desc">車上可小睡。</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">12:06</div>
-              <div class="tl-card">
-                <div class="tl-title">抵達熊本站 🚻</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">12:30</div>
-              <div class="tl-card">
-                <div class="tl-title">午餐：勝烈亭豬排 (米其林推薦美食)</div>
-                <div class="tl-desc">
-                  <ul>
-                    <li>位置：熊本車站對面AMU PLAZA 7F，與熊本車站有連通道</li>
-                    <li>營業時間：11:00～15:00｜17:00～22:00</li>
-                    <li>AMU PLAZA【6F】有海賊王專賣店</li>
-                  </ul>
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/pork.jpg"
-                    alt="熊本城示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">13:30</div>
-              <div class="tl-card">
-                <div class="tl-title">熊本城 🚻</div>
-                <div class="tl-desc">
-                  熊本車站搭A路線路面電車到「熊本城・市役所前」，下車後步行15分鐘至熊本城。
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/kuma.webp"
-                    alt="熊本城示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">15:15</div>
-              <div class="tl-card">
-                <div class="tl-title">櫻之馬場 城彩苑 🚻</div>
-                <div class="tl-desc">
-                  位於熊本城腳下，是結合歷史、購物與美食的複合設施。園區有熊本城博物館「湧湧座」、江戶風情商店街「櫻之小路」，可體驗熊本城歷史，品嚐馬肉可樂餅與購買伴手禮。
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/kuma2.jpg"
-                    alt="城彩苑示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">16:00</div>
-              <div class="tl-card">
-                <div class="tl-title">搭計程車回熊本車站 🚻</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">16:15</div>
-              <div class="tl-card">
-                <div class="tl-title">車站內採購伴手禮</div>
-                <div class="tl-desc">
-                  肥後Yokamon市場：熊本車站內的伴手禮專區
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/kuma.jpg"
-                    alt="伴手禮店示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">17:00</div>
-              <div class="tl-card">
-                <div class="tl-title">進站候車</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">17:20</div>
-              <div class="tl-card">
-                <div class="tl-title">新幹線自由座 → 回博多</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">18:09</div>
-              <div class="tl-card">
-                <div class="tl-title">抵達博多站</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">18:30</div>
-              <div class="tl-card">
-                <div class="tl-title">晚餐：車站外帶便當回房吃</div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- DAY 5 -->
-      <section id="day5" class="day">
-        <button class="day__header" type="button" aria-expanded="false">
-          <div class="day__meta">
-            <div class="day__title">第5天<br />回程</div>
-            <div class="day__date">3/19（四）</div>
-          </div>
-          <div class="day__toggle">展開</div>
-        </button>
-
-        <div class="day__body">
-          <div class="heroimg">
-            <img src="./images/eva.webp" alt="機場示意照片" loading="lazy" />
-          </div>
-
-          <ol class="timeline" aria-label="Day 5 時間軸">
-            <li class="tl-item">
-              <div class="tl-time">07:00</div>
-              <div class="tl-card">
-                <div class="tl-title">飯店早餐</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">07:45</div>
-              <div class="tl-card">
-                <div class="tl-title">超商採購麵包（Lawson 銅鑼燒）</div>
-                <div class="tl-desc">找效期長一點的，可以帶回台灣</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">08:20</div>
-              <div class="tl-card">
-                <div class="tl-title">回房休息</div>
-                <div class="tl-desc">蹲廁所、檢查行李</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">09:40</div>
-              <div class="tl-card">
-                <div class="tl-title">退房</div>
-                <div class="tl-desc">
-                  退房前再確認護照、手機、錢包、伴手禮、行李
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">10:00</div>
-              <div class="tl-card">
-                <div class="tl-title">搭計程車前往機場</div>
-                <div class="tl-desc">可請櫃檯叫車或自己App叫車</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">10:15</div>
-              <div class="tl-card">
-                <div class="tl-title">抵達福岡機場</div>
-                <div class="tl-desc">長榮櫃檯報到 → 托運行李 → 安檢 → 海關</div>
-              </div>
-            </li>
-
-            <li class="tl-item has-photo">
-              <div class="tl-time">（候機）</div>
-              <div class="tl-card">
-                <div class="tl-title">前往登機門＆最後買伴手禮</div>
-                <div class="tl-desc">
-                  登機門 55 / 51A 附近都有賣店（55品項較多；抹茶拿鐵在 51A
-                  附近）。
-                </div>
-                <div class="tl-photo">
-                  <img
-                    src="./images/ma.jpeg"
-                    alt="伴手禮店示意照片"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">11:45</div>
-              <div class="tl-card">
-                <div class="tl-title">登機</div>
-                <div class="tl-desc">收好護照、登機證，準備回家～</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">12:15</div>
-              <div class="tl-card">
-                <div class="tl-title">起飛</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">13:50</div>
-              <div class="tl-card">
-                <div class="tl-title">抵達桃園機場</div>
-                <div class="tl-desc">入境審查 → 領行李 → 海關申報</div>
-              </div>
-            </li>
-
-            <li class="tl-item">
-              <div class="tl-time">（返家）</div>
-              <div class="tl-card">
-                <div class="tl-title">搭計程車回家</div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- <footer class="footer">
-      <div class="footer__inner">
-        <div>做給長輩看的行程網頁｜簡單、清楚、好滑</div>
-        <button class="toTop" data-scroll="#top" type="button">回到最上面</button>
       </div>
-    </footer> -->
-    </main>
 
-    <script src="script.js"></script>
-  </body>
+      <!-- 日期 TAB -->
+      <div class="day-tabs fade-in" role="tablist" aria-label="選擇日期">
+        <button class="day-tab active" role="tab" aria-selected="true"  aria-controls="panel-1" data-panel="1">
+          <div class="day-tab__num">第一天</div>
+          <div class="day-tab__date">3/15(日)  </div>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" aria-controls="panel-2" data-panel="2">
+          <div class="day-tab__num">第二天</div>
+          <div class="day-tab__date">3/16(一)  </div>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" aria-controls="panel-3" data-panel="3">
+          <div class="day-tab__num">第三天</div>
+          <div class="day-tab__date">3/17(二)  </div>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" aria-controls="panel-4" data-panel="4">
+          <div class="day-tab__num">第四天</div>
+          <div class="day-tab__date">3/18(三)  </div>
+        </button>
+        <button class="day-tab" role="tab" aria-selected="false" aria-controls="panel-5" data-panel="5">
+          <div class="day-tab__num">第五天</div>
+          <div class="day-tab__date">3/19(四)  </div>
+        </button>
+      </div>
+
+      <div class="day-panel active" id="panel-1" role="tabpanel">
+        <div class="day-header">
+          <div class="day-header__label">第一天 ｜ 3/15(日)</div>
+          <div class="day-header__title">上午出發 下午逛博多商圈</div>
+          <!-- <div class="day-header__summary">清晨搭機場接送車出發，08:00 長榮起飛，11:15 抵達福岡，下午逛博多車站周邊採買，傍晚入住飯店。</div> -->
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">05:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭計程車前往機場 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">巷口全家便利商店等候計程車</div>
+              <div class="tl-content__note">已預訂台灣大車隊送機服務，車程約 50 分鐘。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">06:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">抵達桃園機場第二航廈 🚻 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">前往長榮航空報到櫃台，領取登機證，辦理行李托運。</div>
+              <div class="tl-content__note">⚠️ 托運行李前先幫行李拍照做記錄，若行李遺失比較好溝通行李外觀。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">06:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">過安檢 → 出境審查 → 前往登機門 <span class="place-tag place-tag--move">出境</span></div>
+              <div class="tl-content__desc">完成安檢與出境審查後前往登機門。飛機停較遠時可能需從登機門搭接駁車。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:30</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">登機 <span class="place-tag place-tag--move">登機</span></div>
+              <div class="tl-content__desc">約 07:30 開始登機。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">08:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">起飛 <span class="place-tag place-tag--move">搭機</span></div>
+
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">11:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">抵達福岡機場 <span class="place-tag place-tag--move">入境</span></div>
+              <div class="tl-content__desc">下飛機 → 入境審查 → 領取行李 → 海關申報。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">12:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭計程車前往飯店 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">機場到飯店車程約15分鐘，飯店寄放行李。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">13:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">逛博多車站 <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__desc">逛 AMU EST、AMU PLAZA、MING、屋上庭園、博多阪急。</div>
+              <div class="tl-img-block"><img src="./images/station2.png" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">14:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">LOPIA超市 採買 <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">購買零食、水果、瓶裝茶（外出可帶著喝）。</div>
+              <ul>
+                <li>友都八喜4F LOPIA超市、大創</li>
+                <li>LOPIA沒有退稅，只收現金</li>
+                <li>晚上人潮較多，建議避開該時段</li>
+              </ul>
+               <div class="tl-img-block"><img src="./images/lopia.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--green">15:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">飯店 Check-in <span class="place-tag place-tag--hotel">住宿</span></div>
+              <div class="tl-content__desc">正式入住，整理行李、稍作休息。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">17:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">晚餐 <span class="place-tag place-tag--meal">餐食</span></div>
+              <div class="tl-content__desc">博多名物料理 喜水丸 (C店筑紫口)</div>
+              <ul>
+                <li>白飯、味增湯、酸菜、明太子吃到飽</li>
+                <li>門口有取號機，有中文介面。</li>
+                <li>入座後用平板點餐</li>
+              </ul>
+              <div class="tl-img-block"><img src="./images/hpublic.avif" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">18:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">超商 & 藥妝採買 <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">逛超商、SUGI 藥局博多車站東店、大國藥妝。</div>
+              <div class="tl-content__note">💡 SUGI 折價券 & 大國藥妝 App 折價券</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">19:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">回房休息 </div>
+              <div class="tl-content__desc">洗澡、吃水果</div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end panel-1 -->
+      <!-- ── DAY 2 ── -->
+      <div class="day-panel" id="panel-2" role="tabpanel">
+        <div class="day-header">
+          <div class="day-header__label">第二天 ｜ 3/16(一) </div>
+          <div class="day-header__title">地鐵一日遊</div>
+
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">飯店早餐 <span class="place-tag place-tag--meal">餐食</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:40</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">回房休息</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">08:40</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">博多站購買地鐵一日票 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">購買地鐵一日乘車券，搭乘綠色七隈線至「櫛田神社前站」。</div>
+              <div class="tl-content__note">💡 一日券可在自動售票機購買</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">09:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">櫛田神社 <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__desc">若時間充裕，還可步行至附近的東長寺。</div>
+              <ul>
+                <li>營業時間：09:00–17:00</li>
+                <li>至今超過1200年歷史，可以說是福岡最古老的神社之一，出口有一棵千年的銀杏樹。</li>
+                <li>神社內種植著河津櫻，比起一般的櫻花，可能在2月底左右就先提早賞花。</li>
+              </ul>
+              <div class="tl-img-block"><img src="./images/spot1.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">10:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">博多運河城 <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__desc">櫛田神社對面的電扶梯連結到博多運河城，約走300公尺</div>
+              <ul>
+                <li>B1：JUMP SHOP海賊王、三麗鷗、松本清(App折價券)、美食街、THANK YOU MART(均一價390)、扭蛋、餐廳</li>
+                <li>1F：GAP、愛迪達</li>
+                <li>2F：迪士尼商店</li>
+                <li>3F：MUJI、ABCMart旗艦店、北臉、Alpen運動用品(南館1F~3F)</li>
+                <li>4F：宜得利、博多天婦羅TAKAO</li>
+              </ul>
+              <div class="tl-img-block"><img src="./images/spot2.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">11:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">午餐 <span class="place-tag place-tag--meal">餐食</span></div>
+              <div class="tl-content__desc">鹿兒島黑牛 泰元牛排</div>
+              <ul>
+                <li>博多運河城 B1</li>
+                <li>點餐方式：用手機掃QR Code點餐</li>
+                <li>套餐約在 1900¥至2500¥之間（包含飯、沙拉、味噌湯）</li>
+              </ul>
+              <div class="tl-img-block">
+                <img src="./images/beef.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">12:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">川端通商店街 <span class="place-tag place-tag--spot">景點</span></div>
+              <!-- <div class="tl-content__desc">傳統商店街，博多傳統工藝品與和菓子。</div> -->
+               <ul>
+                <li>長度約400公尺</li>
+                <li>川端通商店街連接著櫛田神社</li>
+                <li>川端通商店街尾端連接中洲川端站5號出口</li>
+               </ul>
+              <div class="tl-img-block"><img src="./images/street.jpeg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">12:20</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">唐吉訶德中洲店 <span class="place-tag place-tag--spot">採買</span></div>
+              <!-- <div class="tl-content__desc">盡情採買！記得帶折價券。</div> -->
+               <ul>
+                <li>1F：主要賣三麗鷗、動漫類、美妝、保養、保健食品</li>
+                <li>2F：主要賣零食、餅乾、伴手禮、飲品類</li>
+                <li>最高10%免稅+消費1萬日圓以上（不含稅）5%折扣</li>
+                <li>最高10%免稅+消費3萬日圓以上（不含稅）7%折扣</li>
+                <li>與中州川端站4號出口連通，逛完可以直接搭地鐵</li>
+               </ul>
+              <div class="tl-content__note">💡 唐吉訶德折價券請事先準備</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">13:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">從中洲川端站搭乘橘色機場線回博多站 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">順路買飯店1F的銅鑼燒</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">13:30</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">回飯店午睡 <span class="place-tag place-tag--hotel">休息</span></div>
+
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">15:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭機場線至大濠公園站 <span class="place-tag place-tag--move">交通</span></div>
+
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">15:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">大濠公園 / 舞鶴公園 <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__desc">可能有櫻花開</div>
+              <ul>
+                <li>大濠公園面積40公頃，它仿照杭州西湖而建，擁有一座廣大的湖泊，湖中有三座小島以橋樑相連</li>
+                <li>隔壁是舞鶴公園，也是福岡城遺跡。舞鶴公園面積39公頃。</li>
+              </ul>
+               <div class="tl-img-block"><img src="./images/spot3.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">15:50</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭機場線至天神站 <span class="place-tag place-tag--move">交通</span></div>
+              <!-- <div class="tl-content__desc">搭乘橘色機場線至天神站，約 5 分鐘。</div> -->
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">16:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">天神商圈 <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__desc">逛 Mina 天神、AEON（折價券）、TruffleBAKERY 白松露海鹽甜甜圈。</div>
+              <div class="tl-content__note">💡 AEON 折價券請事先準備</div>
+              <div class="tl-img-block"><img src="./images/mina.webp" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">18:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭橘色機場線回博多站 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">從天神站搭乘橘色機場線回博多站，約 5 分鐘。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">18:30</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">晚餐 <span class="place-tag place-tag--meal">餐食</span></div>
+              <div class="tl-content__desc">可以外帶AEON熟食回飯店吃</div>
+
+            </div>
+          </div>
+        </div>
+      </div><!-- end panel-2 -->
+      <!-- ── DAY 3 ── -->
+      <div class="day-panel" id="panel-3" role="tabpanel">
+        <div class="day-header">
+          <div class="day-header__label">第三天 ｜ 3/17(二)</div>
+          <div class="day-header__title">近郊包車一日遊</div>
+        </div>
+        <div class="timeline">
+        <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">飯店早餐 <span class="place-tag place-tag--meal">餐食</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:40</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">回房休息</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">09:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">飯店樓下包車出發<span class="place-tag place-tag--move">交通</span></div>
+              <!-- <div class="tl-content__desc">搭車前往草莓園，車程約 1 小時。</div> -->
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">10:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">POO桑草莓園 🚻 （停留約 80 分鐘）<span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__note">💡 飯店到POO桑草莓園，車程約 60 分鐘
+</div>
+               <ul>
+                <li>九州最大，11個品種的草莓</li>
+                <li>成人 2,500 日圓 ，草莓60分鐘吃到飽</li>
+               </ul>
+              <div class="tl-img-block"><img src="./images/01.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">12:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">柳船遊船 ＋ 鰻魚飯午餐 🚻 （停留約120分鐘）<span class="place-tag place-tag--meal">餐食</span></div>
+             <div class="tl-content__note">💡 POO桑草莓園到柳川，車程約 40 分鐘
+</div>
+               <ul>
+                <li>根據划船時長以及運營商家不同，費用每人半小時1000、一小時2000日元</li>
+                <li>可順路參觀立花邸「御花」（位於柳川遊船下船處附近）</li>
+                <li>柳川附近的鰻魚飯：元祖本吉屋、若松屋</li>
+               </ul>
+              <div class="tl-img-block"><img src="./images/02.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">15:10</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">太宰府天滿宮 🚻 （停留約120分鐘） <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__note">💡 柳川到太宰府天滿宮，車程約 70 分鐘</div>
+              <ul>
+                <li>已有1,100年歷史，主祀「學問之神」</li>
+                <li>遊客中心旁的「御神牛」，據說撫摸頭就能獲得智慧</li>
+                <li>天滿宮表參道有許多小吃：安武梅枝餅、福太郎明太子烤飯糰、YAMAYA明太子法國麵包、天山草莓大福</li>
+              </ul>
+              <div class="tl-img-block"><img src="./images/03.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">17:30</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">返回飯店 <span class="place-tag place-tag--move">交通</span></div>
+               <div class="tl-content__note">💡 太宰府天滿宮到飯店，車程約 40 分鐘
+</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">18:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">晚餐 <span class="place-tag place-tag--meal">餐食</span></div>
+              <div class="tl-content__desc">日本家常菜定食</div>
+              <ul>
+                <li>位置：博多KITTE9F</li>
+                <li>點餐方式：手機掃碼點餐，有中文</li>
+              </ul>
+              <div class="tl-img-block">
+                <img src="./images/caption.jpg" alt="">
+
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">19:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">超市 / 超商 / 藥局採買 <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">還有體力的話再去</div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end panel-3 -->
+      <!-- ── DAY 4 ── -->
+      <div class="day-panel" id="panel-4" role="tabpanel">
+        <div class="day-header">
+          <div class="day-header__label">第四天 ｜ 3/18(三)</div>
+          <div class="day-header__title">新幹線來回熊本</div>
+          <!-- <div class="day-header__summary">早上博多站採購，搭新幹線 38 分鐘至熊本，遊覽熊本城，下午返回博多晚餐。</div> -->
+        </div>
+        <div class="timeline">
+         <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">飯店早餐 <span class="place-tag place-tag--meal">餐食</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:40</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">回房休息</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">09:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">博多站採購伴手禮 <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">前往博多站內「銘品藏」採購伴手禮。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">10:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">阪急採購 <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">購買島本明太子醬、AMANBERRY 等，購買後先回飯店放冰箱保鮮。</div>
+              <div class="tl-content__note">⚠️ 明太子醬需冷藏，採購後請立即回飯店放入冰箱</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">10:45</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">前往博多站購買新幹線來回票 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">購買博多 ⇄ 熊本新幹線來回票（自由座）。</div>
+              <ul>
+                <li>新幹線：「瑞穗號、櫻花號、燕子號」3種列車，依車種不同，停靠站與所需時間也會有所差異（票價相同）</li>
+                <li>整體班次約每20分鐘1班，但瑞穗號班次較少，需特別留意。</li>
+                <li>自由席票價：單趟5,310日圓。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">11:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">進站候車</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">11:28</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭乘新幹線至熊本 <span class="place-tag place-tag--move">新幹線</span></div>
+              <div class="tl-content__desc">自由座出發，車上可以小睡，約 38 分鐘抵達。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">12:06</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">抵達熊本站</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">12:30</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">午餐 <span class="place-tag place-tag--meal">餐食</span></div>
+              <div class="tl-content__desc">勝烈亭豬排 (米其林推薦美食)</div>
+              <ul>
+                <li>位置：熊本車站對面AMU PLAZA 7F，與熊本車站有連通道</li>
+                <li>營業時間：11:00～15:00｜17:00～22:00</li>
+                <li>AMU PLAZA【6F】有海賊王專賣店，可順便逛</li>
+              </ul>
+              <div class="tl-img-block"><img src="./images/pork.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">13:30</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭路面電車至熊本城・市役所前站 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">熊本車站搭 A 路線路面電車，步行約 16 分鐘至熊本城（會經過城彩苑）。</div>
+              <div class="tl-content__note">🎫 熊本城入場券請在城彩苑購買</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">13:45</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">熊本城 <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__desc">日本三大名城之一，震後修復風貌感人，必拍景點。</div>
+              <ul>
+                <li>開放時間：09:00～17:00</li>
+                <li>門票：成人¥800(城彩苑遊客中心的旁邊可以購票)。推薦買兩館通票（熊本城+湧湧座體驗館）¥850</li>
+                <li>城內種植了超過600棵櫻花樹，包括日本櫻、肥后櫻與山櫻</li>
+              </ul>
+              <div class="tl-img-block">
+                <img src="./images/kuma.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">15:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">櫻之馬場 城彩苑 <span class="place-tag place-tag--spot">景點</span></div>
+              <div class="tl-content__desc">位於熊本城腳下，是結合歷史、購物與美食的複合設施。園區有熊本城博物館「湧湧座」、江戶風情商店街「櫻之小路」，可體驗熊本城歷史，品嚐馬肉可樂餅與購買伴手禮。</div>
+              <ul>
+                <li>菅乃屋馬肉專門店：馬肉可樂餅300¥</li>
+                <li>熊本熊造型的雞蛋糕330¥</li>
+                <li>天草海食 海膽可樂餅：海膽可樂餅430¥</li>
+              </ul>
+              <div class="tl-img-block">
+               <img src="./images/kuma2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">16:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭計程車回熊本車站 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">約 10 分鐘。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">16:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">熊本車站採購伴手禮 <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">肥後Yokamon市場：熊本車站內的伴手禮專區</div>
+              <div class="tl-img-block">
+               <img src="./images/kuma.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">17:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">進站候車</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">17:20</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭乘新幹線返回博多 <span class="place-tag place-tag--move">新幹線</span></div>
+              <div class="tl-content__desc">自由座返回，約 38 分鐘。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">18:09</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">抵達博多站</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">18:09</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">最終採購（如需要） <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">補充藥妝或伴手禮。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">18:30</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">晚餐 <span class="place-tag place-tag--meal">餐食</span></div>
+              <div class="tl-content__desc">外帶新幹線便當回房吃</div>
+
+            </div>
+          </div>
+        </div>
+      </div><!-- end panel-4 -->
+      <!-- ── DAY 5 ── -->
+      <div class="day-panel" id="panel-5" role="tabpanel">
+        <div class="day-header">
+          <div class="day-header__label">第五天 ｜ 3/19(四)</div>
+          <div class="day-header__title">回程</div>
+          <!-- <div class="day-header__summary">早餐後整理行李退房，10:00 搭計程車前往福岡機場，12:15 長榮起飛，13:50 抵達桃園機場返家。</div> -->
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">飯店早餐 <span class="place-tag place-tag--meal">餐食</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">07:45</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">超商採購點心 <span class="place-tag place-tag--spot">採買</span></div>
+              <div class="tl-content__desc">買 Lawson 銅鑼燒等超商麵包，打包放行李托運。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">08:10</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">回房休息、檢查行李</div>
+              <div class="tl-content__desc">仔細確認行李，護照、機票、貴重物品放隨身包，冷藏品（明太子醬等）確認已妥善打包。</div>
+              <div class="tl-content__note">⚠️ 預訂前往機場的計程車</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">09:40</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">退房 <span class="place-tag place-tag--hotel">退房</span></div>
+              <div class="tl-content__desc">至 3F 大廳辦理退房，確認所有行李數量。</div>
+              <div class="tl-content__note">💡 或請飯店協助叫計程車</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">10:00</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭計程車前往福岡機場 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__desc">約 15 分鐘。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">10:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">福岡機場 3F 長榮櫃台報到 <span class="place-tag place-tag--move">出境</span></div>
+              <div class="tl-content__desc">領登機證，辦理行李托運。</div>
+              <ul>
+                <li>過安檢 → 海關查驗 → 出境審查 → 前往登機門</li>
+                <li>登機門55以及登機門51A附近各有一區伴手禮賣店，55品項較多，抹茶拿鐵在51A附近</li>
+              </ul>
+              <div class="tl-content__note">💡 可搭配機場折價券</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">11:45</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">登機 <span class="place-tag place-tag--move">登機</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">12:15</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">起飛 <span class="place-tag place-tag--move">搭機</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge badge--accent">13:50</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">抵達桃園機場 <span class="place-tag place-tag--move">入境</span></div>
+              <div class="tl-content__desc">下飛機 → 入境審查 → 領取行李 → 海關申報。</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">
+              <div class="tl-time__badge ">14:50</div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-content__place">搭計程車回家 <span class="place-tag place-tag--move">交通</span></div>
+              <div class="tl-content__note">已預訂台灣大車隊送機服務，車程約 50 分鐘。</div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end panel-5 -->
+
+    </div><!-- end .container -->
+  </section>
+
+  <!-- =============================================
+       注意事項
+  ============================================= -->
+  <section class="section section--alt" id="tips">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="section-title__icon">📌</div>
+        <div>
+          <div class="section-title__text">出發前注意事項</div>
+          <!-- <div class="section-title__sub">請全家人出發前確認</div> -->
+        </div>
+      </div>
+
+      <div class="info-grid fade-in">
+
+        <!-- ── 類別一：日本旅遊注意事項 ── -->
+        <div class="info-card" style="grid-column:1/-1;flex-direction:column;gap:0;">
+          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
+            <div style="font-size:1.5rem;line-height:1;">🇯🇵</div>
+            <div>
+              <div class="info-card__title" style="font-size:1rem;">日本旅遊注意事項</div>
+            </div>
+          </div>
+          <div style="display:grid;gap:0.55rem;">
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🕐</span>
+              <div class="info-card__body"><strong>時差</strong>：日本時間比台灣快 1 小時。例如日本中午 12:00，台灣是上午 11:00。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🔌</span>
+              <div class="info-card__body"><strong>電壓</strong>：日本 100V，台灣 110V，差異很小。大部分手機、筆電充電器支援 100V–240V，不需要變壓器。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">💳</span>
+              <div class="info-card__body"><strong>刷卡</strong>：結帳時選擇<strong>日幣計價</strong>較划算，避免選台幣動態貨幣轉換。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">💴</span>
+              <div class="info-card__body"><strong>攜帶現金</strong>：入境日本攜帶現金無絕對上限，但若總額超過 <strong>100 萬日圓</strong>（含等值外幣、旅行支票、有價證券）須向海關申報；隨身金飾品總值超過 <strong>20 萬日圓</strong>也需另外填報。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🚇</span>
+              <div class="info-card__body"><strong>搭乘大眾運輸</strong>：車廂內不能講電話；背包請<strong>往前背</strong>，避免影響他人。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">⛩</span>
+              <div class="info-card__body"><strong>神社禮儀</strong>：鳥居前停一下微微鞠躬；走路<strong>不要走正中央</strong>（正中央是神明走的路），稍微靠左或靠右。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🙏</span>
+              <div class="info-card__body"><strong>神社參拜流程</strong>：丟香油錢（通常 ¥5）→ <strong>鞠躬兩次</strong> → <strong>拍手兩次</strong> → 心裡許願 → <strong>鞠躬一次</strong>。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🗑</span>
+              <div class="info-card__body"><strong>垃圾桶很少</strong>：日本公共垃圾桶不多，小垃圾先放包包，回飯店或車站看到垃圾桶再丟。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🧻</span>
+              <div class="info-card__body"><strong>廁所衛生紙</strong>：要直接沖馬桶。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">📸</span>
+              <div class="info-card__body"><strong>拍照注意</strong>：日本人非常重視隱私權，拍照時注意<strong>不要拍到其他人的臉</strong>，尤其是小孩。</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── 類別二：退稅政策 ── -->
+        <div class="info-card" style="grid-column:1/-1;flex-direction:column;gap:0;">
+          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
+            <div style="font-size:1.5rem;line-height:1;">💰</div>
+            <div>
+              <div class="info-card__title" style="font-size:1rem;">退稅政策</div>
+            </div>
+          </div>
+          <div style="display:grid;gap:0.55rem;">
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🏷</span>
+              <div class="info-card__body"><strong>合併計算</strong>：在同一家店內購買的【一般用品】和【消耗品】可以合併計算。累積消費達到<strong>未稅 ¥5,000 以上、未稅 ¥500,000 以下</strong>即可免稅。同一百貨商場內不同店家消費也可於免稅櫃台合併辦理退稅。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🏬</span>
+              <div class="info-card__body"><strong>兩種退稅方式</strong>：免稅商店可直接以未稅金額結帳；百貨商場則須攜帶收據至<strong>免稅櫃台</strong>辦理退稅。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">🛂</span>
+              <div class="info-card__body"><strong>辦理需要</strong>：本人出示蓋有<strong>入境章的護照</strong>（或免稅 QR Code），店員確認入境資格與個人資料後，購買記錄將傳送至海關。</div>
+            </div>
+
+            <div style="display:flex;gap:0.7rem;align-items:flex-start;">
+              <span style="font-size:1rem;flex-shrink:0;margin-top:1px;">📦</span>
+              <div class="info-card__body">
+                <strong>密封規定</strong>：
+                <br>・<strong>消耗品</strong>（用一次就消耗，如食品、化妝品）→ 會用<strong>免稅袋密封</strong>，出境前不得打開。
+                <br>・<strong>非消耗品</strong>（可重複使用，如鞋子、衣服、電器）→ <strong>不密封</strong>，可自由使用。
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer">
+    <strong>九州五日遊</strong>
+    ❤️ 旅途平安，一路順風 ❤️
+  </footer>
+
+  <!-- =============================================
+       JAVASCRIPT — 封裝於 IIFE，不污染全域
+  ============================================= -->
+  <script src="script.js"></script>
+
+</body>
 </html>

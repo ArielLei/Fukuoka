@@ -1,81 +1,127 @@
-// 平滑滾動
-document.querySelectorAll("[data-scroll]").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const target=document.querySelector(btn.dataset.scroll);
-    if(target) target.scrollIntoView({behavior:"smooth"});
-  });
-});
+/* =============================================
+   九州五日家族旅行 ｜ JavaScript script.js
+============================================= */
 
-// Accordion
-document.querySelectorAll(".day").forEach(day=>{
-  const header=day.querySelector(".day__header");
-  const toggle=day.querySelector(".day__toggle");
+(function () {
+      'use strict';
 
-  header.addEventListener("click",()=>{
-    day.classList.toggle("is-open");
-    if(toggle){
-      toggle.textContent=
-        day.classList.contains("is-open")?"收合":"展開";
-    }
-  });
-});
+      /* ──────────────────────────────
+         1. TAB 切換（每日行程）
+      ────────────────────────────── */
+      (function initTabs() {
+        const tabs   = document.querySelectorAll('.day-tab');
+        const panels = document.querySelectorAll('.day-panel');
 
-// Carousel
-// ===============================
-document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            const targetId = 'panel-' + tab.getAttribute('data-panel');
 
-  const images = carousel.querySelectorAll(".carousel__img");
-  const dots = carousel.querySelectorAll(".dot");
-  const prevBtn = carousel.querySelector(".prev");
-  const nextBtn = carousel.querySelector(".next");
+            // 重置所有
+            tabs.forEach(function (t) {
+              t.classList.remove('active');
+              t.setAttribute('aria-selected', 'false');
+            });
+            panels.forEach(function (p) { p.classList.remove('active'); });
 
-  if (!images.length) return;
+            // 啟用目標
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            const panel = document.getElementById(targetId);
+            if (panel) {
+              panel.classList.add('active');
+              // 平滑捲到行程區（扣掉 nav 高度）
+              const navH = parseInt(
+                getComputedStyle(document.documentElement).getPropertyValue('--nav-h') || '56'
+              );
+              const top = document.getElementById('itinerary').getBoundingClientRect().top
+                          + window.scrollY - navH - 12;
+              window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+          });
+        });
+      })();
 
-  let current = 0;
-  let startX = 0;
-  let isDown = false;
+      /* ──────────────────────────────
+         2. 輪播（飯店圖片）
+      ────────────────────────────── */
+      (function initCarousel() {
+        const track  = document.getElementById('carouselTrack');
+        const prev   = document.getElementById('prevBtn');
+        const next   = document.getElementById('nextBtn');
+        const dots   = document.querySelectorAll('.carousel__dot');
+        if (!track) return;
 
-  function update(index) {
-    current = (index + images.length) % images.length;
+        let cur = 0;
+        const total = dots.length;
+        let timer;
 
-    images.forEach(img => img.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+        function go(idx) {
+          cur = (idx + total) % total;
+          track.style.transform = 'translateX(-' + cur * 100 + '%)';
+          dots.forEach(function (d, i) {
+            d.classList.toggle('active', i === cur);
+          });
+        }
 
-    images[current].classList.add("active");
-    if (dots[current]) dots[current].classList.add("active");
-  }
+        function startAuto() { timer = setInterval(function () { go(cur + 1); }, 4500); }
+        function stopAuto()  { clearInterval(timer); }
 
-  function next() { update(current + 1); }
-  function prev() { update(current - 1); }
+        prev.addEventListener('click', function () { stopAuto(); go(cur - 1); startAuto(); });
+        next.addEventListener('click', function () { stopAuto(); go(cur + 1); startAuto(); });
+        dots.forEach(function (d) {
+          d.addEventListener('click', function () {
+            stopAuto();
+            go(parseInt(d.getAttribute('data-index'), 10));
+            startAuto();
+          });
+        });
 
-  // 按鈕
-  if (nextBtn) nextBtn.addEventListener("click", next);
-  if (prevBtn) prevBtn.addEventListener("click", prev);
+        startAuto();
+      })();
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => update(i));
-  });
+      /* ──────────────────────────────
+         3. Scroll Fade-in
+      ────────────────────────────── */
+      (function initFadeIn() {
+        if (!('IntersectionObserver' in window)) {
+          document.querySelectorAll('.fade-in').forEach(function (el) {
+            el.classList.add('visible');
+          });
+          return;
+        }
 
-  // ⭐ 改用 Pointer 事件（比 touch 穩定）
-  carousel.addEventListener("pointerdown", (e) => {
-    carousel.setPointerCapture(e.pointerId);
-    startX = e.clientX;
-    isDown = true;
-  });
+        const obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-  carousel.addEventListener("pointerup", (e) => {
-    if (!isDown) return;
+        document.querySelectorAll('.fade-in').forEach(function (el) { obs.observe(el); });
+      })();
 
-    const diff = startX - e.clientX;
+      /* ──────────────────────────────
+         4. Nav active highlight on scroll
+      ────────────────────────────── */
+      (function initNavHighlight() {
+        const sections = ['flight', 'hotel', 'itinerary', 'tips'];
+        const links = document.querySelectorAll('.nav__links a');
 
-    if (Math.abs(diff) > 40) {
-      if (diff > 0) next();
-      else prev();
-    }
+        window.addEventListener('scroll', function () {
+          let cur = '';
+          sections.forEach(function (id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            if (window.scrollY >= el.offsetTop - 80) cur = id;
+          });
+          links.forEach(function (a) {
+            const href = a.getAttribute('href').replace('#', '');
+            a.style.color = href === cur ? 'var(--accent)' : '';
+            a.style.borderBottomColor = href === cur ? 'var(--accent)' : '';
+          });
+        }, { passive: true });
+      })();
 
-    isDown = false;
-    carousel.releasePointerCapture(e.pointerId);
-  });
-
-  update(0);
-});
+    })();
