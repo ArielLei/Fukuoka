@@ -20,9 +20,9 @@
       --ink:         #1E1A16;          /* 深墨 */
       --ink-2:       #4A4035;          /* 次要文字 */
       --ink-3:       #8A7D70;          /* 輔助文字 */
-      --accent:      #C0441C;          /* 九州赤 — 太宰府紅 */
+      --accent:      #d64e21;          /* 九州赤 — 太宰府紅 */
       --accent-soft: #F2E5DF;
-      --green:       #3A6B3A;          /* 阿蘇翠綠 */
+      --green:       #3c893c;          /* 阿蘇翠綠 */
       --green-soft:  #E3EEE3;
       --gold:        #9C7A2A;
       --gold-soft:   #F5EDD7;
@@ -553,6 +553,7 @@
       text-align: center;
       transition: background 0.2s, border-color 0.2s, transform 0.2s;
       min-width: 72px;
+      color: #000;
     }
 
     .day-tab:hover {
@@ -999,7 +1000,9 @@
       }
 
       .day-tab__date {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        margin-top: 8px;
+        letter-spacing: 2px;
       }
 
       /* 每日標題摘要 */
