@@ -325,7 +325,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;                 /* 飛機符號與飛行時間拉開距離 */
+      gap: 18px;                 /* 飛機符號與飛行時間拉開距離 */
     }
 
     .route__line {
@@ -344,7 +344,7 @@
       transform: translate(-50%, -50%);
       background: var(--surface);
       padding: 0 6px;           /* 左右留更多空間，不遮擋線 */
-      font-size: 1rem;
+      font-size: 1.5rem;
       color: var(--accent);
     }
 
