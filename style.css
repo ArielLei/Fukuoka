@@ -337,7 +337,7 @@
     }
 
     .route__line::before {
-      content: '✈';
+      content: '\2708\FE0E';
       position: absolute;
       left: 50%;
       top: 50%;
