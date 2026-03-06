@@ -19,7 +19,7 @@
       --border:      #E2D9CC;
       --ink:         #1E1A16;          /* 深墨 */
       --ink-2:       #4A4035;          /* 次要文字 */
-      --ink-3:       #8A7D70;          /* 輔助文字 */
+      --ink-3:       #826f5c;          /* 輔助文字 */
       --accent:      #d64e21;          /* 九州赤 — 太宰府紅 */
       --accent-soft: #F2E5DF;
       --green:       #3c893c;          /* 阿蘇翠綠 */
@@ -124,7 +124,7 @@
     }
 
     /* 九州輪廓裝飾 */
-    .hero::before {
+    /* .hero::before {
       content: '九州';
       position: absolute;
       right: -0.5rem;
@@ -137,7 +137,7 @@
       line-height: 1;
       pointer-events: none;
       user-select: none;
-    }
+    } */
 
     .hero__tag {
       display: inline-block;
@@ -182,7 +182,7 @@
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.18);
       color: rgba(255,255,255,0.85);
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       padding: 5px 14px;
       border-radius: 99px;
       font-weight: 500;
@@ -267,7 +267,7 @@
     }
 
     .flight-card__dir {
-      font-size: 0.75rem;
+      font-size: 0.9rem;
       font-weight: 700;
       letter-spacing: 0.1em;
     }
@@ -598,7 +598,7 @@
     }
 
     .day-header__label {
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -608,7 +608,7 @@
 
     .day-header__title {
       font-family: var(--font-body);
-      font-size: clamp(0.9rem, 4vw, 1rem);
+      font-size: clamp(0.9rem, 4vw, 1.5rem);
       font-weight: 700;
       color: var(--ink);
       margin-bottom: 0.4rem;
@@ -1007,7 +1007,7 @@
 
       /* 每日標題摘要 */
       .day-header__title {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
       .day-header__summary {
@@ -1028,17 +1028,17 @@
       /* 航班資訊 */
       .route__code   { font-size: 1.3rem; }
       .route__time   { font-size: 1.6rem; }
-      .fmeta__label  { font-size: 0.72rem; }
+      .fmeta__label  { font-size: 0.8rem; }
       .fmeta__value  { font-size: 1rem; }
 
       /* 標籤 tag */
-      .tag { font-size: 0.78rem; }
+      .tag { font-size: 0.85rem; }
 
       /* 注意事項 */
       .info-card__title { font-size: 1rem; }
       .info-card__body  { font-size: 0.92rem; line-height: 1.95; }
 
       /* Nav 連結 */
-      .nav__links a { font-size: 0.9rem; }
+      .nav__links a { font-size: 0.95rem; }
       .nav__brand   { font-size: 1.1rem; }
     }
