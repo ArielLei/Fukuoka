@@ -56,12 +56,13 @@
         let timer;
 
         function go(idx) {
-          cur = (idx + total) % total;
-          track.style.transform = 'translateX(-' + cur * 100 + '%)';
-          dots.forEach(function (d, i) {
-            d.classList.toggle('active', i === cur);
-          });
-        }
+  cur = (idx + total) % total;
+  const slideWidth = track.parentElement.offsetWidth;  // 取容器實際寬度
+  track.style.transform = 'translateX(-' + (cur * slideWidth) + 'px)';
+  dots.forEach(function (d, i) {
+    d.classList.toggle('active', i === cur);
+  });
+}
 
         function startAuto() { timer = setInterval(function () { go(cur + 1); }, 4500); }
         function stopAuto()  { clearInterval(timer); }
